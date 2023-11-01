@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --button-bg-color:rgb(238, 16, 238);
+}
+#upper-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.keyboard-button {
+    background: linear-gradient(135deg, #ffab58, #ff7a58);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 24px;
+    opacity: 0.5;
+    cursor:not-allowed;
+    transition: background 0.3s ease-in-out;
+    margin: 5px;
+}
+
+.enabled:hover {
+    background: linear-gradient(135deg, hwb(304 35% 0%), hsl(323, 65%, 79%));
+}
+
+.cheerful-gradient {
+    background: linear-gradient(135deg, rgb(84, 134, 235), rgb(61, 64, 220));
+}
+
+.hangman{
+    padding:1rem;
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.enabled{
+    opacity: 1;
+    cursor: pointer;
+}
+img{/* 
+    margin: 1rem; */
+    display: inline-block;
+}
+.player-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.7rem;
+    margin: 0.5rem;
+    padding: 1rem;
+}
+.word, .hint{
+    margin-left: 1rem;
+    font-size: 3rem;
+    padding: 0.8rem;
+    font-weight: bold;
+}
+.hint{
+    font-size: 1.5rem;
+}
+.upper-container{
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* lost-case */
+.game-lost, .game-won{
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+    background-color: rgba(0, 0, 0, 0.256);
+    display: flex;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease-in;
+}
+.display{
+    opacity: 1;
+    pointer-events: auto;
+}
+.game-lost-display,.game-won-display{
+    background-color:aliceblue;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+.lost-text,.won-text{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+.correct-word{
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+.won-add-on{
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+.play-again{
+    background-color: var(--button-bg-color);
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+}
+.play-again:hover{
+    color: var(--button-bg-color);
+    background-color: whitesmoke;
+    border: 2px solid var(--button-bg-color);
+    cursor: pointer;
+}
+
+/*welcome page -css*/
+.welcome-page {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(135deg, hwb(224 41% 3%), rgb(197, 143, 172), rgb(232, 102, 182), hsl(331, 97%, 48%));
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    background-color: rgb(170, 211, 238);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.front-page {
+    background: linear-gradient(135deg, hwb(195 41% 7%), hwb(250 47% 14%));
+    color: hwb(0 67% 11%);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: hsl(220, 96%, 49%);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.submit{
+    background: linear-gradient(135deg, #040d39, rgb(0, 25, 249));
+    color: rgb(238, 221, 221);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin: 5px;
+}
+.submit:hover{
+    background: linear-gradient(135deg, hwb(304 35% 0%), hsl(323, 65%, 79%));
+}
+label {
+    font-size: 20px;
+    color: hsl(0, 1%, 19%);
+}
+
+input {
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid #5083e7;
+    border-radius: 5px;
+}
+
+.start-game-button, .leaderboard-button {
+    background: linear-gradient(135deg, #040d39, rgb(0, 25, 249));
+    color: rgb(238, 221, 221);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin: 5px;
+}
+.leaderboard-button{
+    cursor: default;
+}
+.start-game-button:hover{
+    background: linear-gradient(135deg, hwb(304 35% 0%), hsl(323, 65%, 79%));
+}
+
+
+
+/*keyboard*/
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;/* 
+    gap: 10px; */
+    justify-content: center;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/*remove*/
+
+.activity-killer{
+    display:none;
+}
